@@ -9,12 +9,12 @@ class IntroPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.deepPurple,
+      color: Colors.yellow,
       child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Intro Page 1'),
+              Text('Intro Page 2'),
               // Load a Lottie file from your assets
               Lottie.asset('assets/lottie/taxi_moving_1710583217099.json'),
             ],

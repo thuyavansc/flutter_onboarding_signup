@@ -55,7 +55,7 @@ class _OnBardingScreenState extends State<OnBardingScreen> {
                 child: Text('Skip'),
               ),
                //Page indication
-               SmoothPageIndicator(controller: _controller, count: 3),
+               SmoothPageIndicator(controller: _controller, count: 3, effect: ExpandingDotsEffect(),),
                //Next Page or Done
                isLastPage ?
                GestureDetector(
