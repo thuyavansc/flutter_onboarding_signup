@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_signup/intro_screen/intro_page_1.dart';
+import 'package:flutter_onboarding_signup/sign_in/sign_in_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'intro_screen/home_page.dart';
@@ -62,7 +63,7 @@ class _OnBardingScreenState extends State<OnBardingScreen> {
                  onTap:(){
                    Navigator.push(context,
                      MaterialPageRoute(builder: (context) {
-                       return HomePage();
+                       return SignInScreen();
                      },
                     ),
                    );
