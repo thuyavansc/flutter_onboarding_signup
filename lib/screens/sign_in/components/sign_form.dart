@@ -1,12 +1,14 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_onboarding_signup/screens/login_success/login_success_screen.dart';
 import 'package:gap/gap.dart';
 import 'package:getwidget/components/button/gf_button.dart';
 import 'package:getwidget/shape/gf_button_shape.dart';
 import 'package:getwidget/size/gf_size.dart';
 
-import '../../constants.dart';
-import '../../size_config.dart';
+import '../../../constants.dart';
+import '../../../size_config.dart';
+import '../../forgot_password/forgot_password_screen.dart';
 import 'custom_suffix_icon.dart';
 import 'form_error.dart';
 
@@ -53,9 +55,13 @@ class _SignFormState extends State<SignForm> {
               ),
               Text('Remember me'),
               Spacer(),
-              Text(
-                'Forget Password',
-                style: TextStyle(decoration: TextDecoration.underline),
+              GestureDetector(
+                //onTap: () => Navigator.popAndPushNamed(context, ForgotPasswordScreen.routeName),
+                onTap: () => Navigator.pushNamed(context, ForgotPasswordScreen.routeName),
+                child: Text(
+                  'Forget Password',
+                  style: TextStyle(decoration: TextDecoration.underline),
+                ),
               )
             ],
           ),
@@ -64,6 +70,8 @@ class _SignFormState extends State<SignForm> {
               if(_formKey.currentState != null && _formKey.currentState!.validate()){
                 _formKey.currentState!.save();
                 // Perform actions after form submission
+                //if all are valid then go to success screen
+                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
             text: "Continue",
@@ -102,10 +110,12 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.add(kPassNullError);
           });
+          return '';
         } else if (value.length < 8 && !errors.contains(kShortPassError)){
           setState(() {
             errors.add(kShortPassError);
           });
+          return '';
         }
         return null;
       },
@@ -139,10 +149,12 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.add(kEmailNullError);
           });
+          return '';
         } else if (!emailValidatorRegExp.hasMatch(value) && !errors.contains(kInvalidEmailError)){
           setState(() {
             errors.add(kInvalidEmailError);
           });
+          return '';
         }
         return null;
       },

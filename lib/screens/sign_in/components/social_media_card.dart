@@ -2,7 +2,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../size_config.dart';
+import '../../../constants.dart';
+import '../../../size_config.dart';
 
 class SocialMediaCard extends StatelessWidget {
   final String icon;

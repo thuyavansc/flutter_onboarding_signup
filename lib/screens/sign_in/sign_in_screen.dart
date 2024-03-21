@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../size_config.dart';
+import '../../size_config.dart';
 import 'components/sign_in_body.dart';
 
 class SignInScreen extends StatelessWidget {

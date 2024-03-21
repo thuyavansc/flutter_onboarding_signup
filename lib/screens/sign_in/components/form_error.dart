@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 
-import '../../size_config.dart';
+import '../../../size_config.dart';
 
 class FormError extends StatelessWidget {
   const FormError({

@@ -1,18 +1,20 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding_signup/sign_in/components/sign_form.dart';
-import 'package:flutter_onboarding_signup/sign_in/components/social_media_card.dart';
+import 'package:flutter_onboarding_signup/screens/forgot_password/forgot_password_screen.dart';
+import 'package:flutter_onboarding_signup/screens/sign_in/components/sign_form.dart';
+import 'package:flutter_onboarding_signup/screens/sign_in/components/social_media_card.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:getwidget/components/button/gf_button.dart';
 import 'package:getwidget/shape/gf_button_shape.dart';
 import 'package:getwidget/size/gf_size.dart';
 
-import '../../constants.dart';
-import '../../size_config.dart';
+import '../../../constants.dart';
+import '../../../size_config.dart';
 import 'custom_suffix_icon.dart';
 import 'form_error.dart';
+import 'no_account_text.dart';
 
 class SignInBody extends StatelessWidget {
   const SignInBody({super.key});
@@ -59,24 +61,7 @@ class SignInBody extends StatelessWidget {
                     ],
                   ),
                   Gap(getProportionateScreenWidth(20)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Don\'t have an account ?',
-                        style: TextStyle(
-                          fontSize: getProportionateScreenWidth(16),
-                        ),
-                      ),
-                      Text(
-                        ' Sign Up',
-                        style: TextStyle(
-                          fontSize: getProportionateScreenWidth(16),
-                          color: kPrimaryColor,
-                        ),
-                      ),
-                    ],
-                  )
+                  NoAccountText()
                 ],
               ),
             ),
@@ -85,6 +70,8 @@ class SignInBody extends StatelessWidget {
     );
   }
 }
+
+
 
 
 

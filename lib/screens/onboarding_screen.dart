@@ -1,13 +1,12 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding_signup/intro_screen/intro_page_1.dart';
-import 'package:flutter_onboarding_signup/sign_in/sign_in_screen.dart';
+import 'package:flutter_onboarding_signup/screens/intro_screen/intro_page_1.dart';
+import 'package:flutter_onboarding_signup/screens/intro_screen/intro_page_2.dart';
+import 'package:flutter_onboarding_signup/screens/intro_screen/intro_page_3.dart';
+import 'package:flutter_onboarding_signup/screens/sign_in/sign_in_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import 'intro_screen/home_page.dart';
-import 'intro_screen/intro_page_2.dart';
-import 'intro_screen/intro_page_3.dart';
 
 class OnBardingScreen extends StatefulWidget {
   const OnBardingScreen({super.key});

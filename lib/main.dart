@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_onboarding_signup/routes.dart';
 import 'package:flutter_onboarding_signup/theme.dart';
 
-import 'onboarding_screen.dart';
+import 'screens/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       //   useMaterial3: true,
       // )
       home: const OnBardingScreen(),
+      routes: routes,
     );
   }
 }
